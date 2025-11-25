@@ -1,6 +1,10 @@
 const express = require('express')
 const mongoose = require('mongoose')
+<<<<<<< HEAD
 const router = require('./routes/user.router')
+=======
+const router = require('./routes/blog.router')
+>>>>>>> main
 const app = express()
 console.log("server code")
 
@@ -12,9 +16,11 @@ mongoose.connect("mongodb+srv://tanyapvt2005_db_user:BzV7o5SJ2V3jmBxC@foreverclu
 
 
 app.use("/api/users", router)
+app.use('/api/blogs', router)
 app.get("/",(req, res)=>{
     res.json({message:"ok"})
 })
+
 app.listen(5565,()=>{
     console.log("Server started");
     
